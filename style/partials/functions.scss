@@ -1,0 +1,5 @@
+// add maring and padding
+@mixin spacing($space){
+    padding: $space;
+    margin: $space;
+}

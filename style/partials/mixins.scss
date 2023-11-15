@@ -1,0 +1,36 @@
+@import 'variable.css';
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin primaryColorBorder{
+    border: 1px solid $primary-color;
+}
+
+@mixin smoothScroll{
+  scroll-behavior: smooth;
+}
+
+
+@mixin custom-scrollbar($width: 10px, $track-background: #f1f1f1, $handle-background: #888, $handle-hover-background: #555) {
+    &::-webkit-scrollbar {
+      width: $width;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: $track-background;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: $handle-background;
+    }
+  
+    &::-webkit-scrollbar-thumb:hover {
+      background: $handle-hover-background;
+    }
+  }
+
+  

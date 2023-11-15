@@ -1,0 +1,111 @@
+@import 'partials/variable.scss';
+@import 'partials/mixins.scss';
+@import 'partials/functions.scss';
+@import 'partials/colors.scss';
+@import 'partials/dimensions.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: $secondary-color;
+    color: $primary-color;
+    font-size: 100%;
+    @include smoothScroll;
+    @include custom-scrollbar(4px, $secondary-color, #0d2b26, rgba(13,43,38,0.7));
+}
+
+header {
+    box-shadow: 0px 4px 8px #0d2b261a;
+    height: $header-height;
+}
+
+.header-text {
+    font-size: $header-font;
+    padding: $padding2x 0 $padding2x $padding2x;
+}
+
+main {
+    width: 100%;
+    height: calc(100vh - ($header-height));
+    @include flex-center;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    
+    .input-div, .response-content-div
+   {
+        display: flex;
+        justify-content: center;
+    }
+
+    .input-div {
+        padding: 0 rem;
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 80%;
+
+        .input-label-animation {
+            font-size: 3em;
+            margin-bottom: 3rem;
+        }
+
+        .url-input-box {
+            width: 80%;
+            padding: $padding1x;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid $primary-color;
+            font-size: 1em;
+            margin-bottom: 2rem;
+            text-overflow: ellipsis;
+        }
+
+        .send-btn {
+            font-size: 1.2rem;
+            height: 2.5rem;
+            width: 9rem;
+            border: 3px solid $primary-color;
+            background-color: $secondary-color;
+            color: $primary-color;
+           
+        }
+
+        .send-btn:hover{
+            background-color: $primary-color;
+            color: $secondary-color;
+            font-weight: 700;
+        }
+    }
+    
+    .response-content-div{
+        padding: $padding3x;
+
+        .response-content-card{
+            padding: $padding2x;
+          
+            
+            .response-text{
+                width: 80%;
+                height: 80vh;
+                box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+                padding: $padding2x $padding3x;
+                text-align: justify;
+                overflow: scroll;
+                @include custom-scrollbar(4px, $secondary-color, #0d2b26, rgba(13,43,38,0.7));
+                @include smoothScroll;
+                overflow-x: hidden;
+                border-radius: 16px 0 0 16px;
+            }
+        }      
+    }
+}
+
