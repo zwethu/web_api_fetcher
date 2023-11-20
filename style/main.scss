@@ -90,7 +90,8 @@ main {
 
         .response-content-card {
 
-            .response-text {
+            .response-text-div {
+                min-width: 37rem;
                 max-width: 37rem;
                 height: 80vh;
                 box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
@@ -112,6 +113,41 @@ main {
                     /* Opera 7 */
                     word-wrap: break-word;
                     /* Internet Explorer 5.5+ */
+                    font-weight: bold;
+                    font-size: 12px;
+                }
+
+                .tooltip-text {
+                    padding-bottom: 4px;
+                    position: relative;
+                    top: -4px;
+                    left: -8px;
+                    visibility: hidden;
+                    font-weight: bold;
+                    @include primaryColorBorder;
+                    color: $primary-color;
+                    padding: 8px;
+                    border-radius: 4px;
+                }
+
+                #copy-btn-div {
+                    display: block;
+                    text-align: end;
+
+                    #copy-btn {
+                        font-size: $spacing3x;
+                        color: $primary-color;
+                        padding: 8px;
+                        border-radius: $spacing1x;
+
+                        &:hover {
+                            color: $secondary-color;
+                            background-color: $primary-color;
+                            cursor: pointer;
+                        }
+
+
+                    }
                 }
             }
         }
