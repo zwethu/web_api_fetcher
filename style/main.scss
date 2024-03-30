@@ -14,6 +14,7 @@ html {
     background-color: $secondary-color;
     color: $primary-color;
     font-size: 100%;
+    font-family: 'Carrois Gothic', sans-serif;
     @include smoothScroll;
     @include custom-scrollbar(4px, $secondary-color, #0d2b26, rgba(13, 43, 38, 0.7));
 }
@@ -56,17 +57,19 @@ main {
         .input-label-animation {
             font-size: 3em;
             margin-bottom: 3rem;
+            font-family: 'Ubuntu', sans-serif;
         }
 
         .url-input-box {
-            width: 80%;
+            resize: none;
             padding: $padding1x;
             border: none;
             outline: none;
             border-bottom: 1px solid $primary-color;
-            font-size: 1em;
+            font-size: 1.2em;
             margin-bottom: 2rem;
             text-overflow: ellipsis;
+            font-family: 'Carrois Gothic', sans-serif;
         }
 
         .send-btn {
@@ -80,6 +83,7 @@ main {
         }
 
         .send-btn:hover {
+            cursor: pointer;
             background-color: $primary-color;
             color: $secondary-color;
             font-weight: 700;
@@ -88,18 +92,19 @@ main {
 
     .response-content-div {
 
-        .response-content-card {
 
+        .response-content-card {
             .response-text-div {
-                min-width: 37rem;
-                max-width: 37rem;
+                transition: width 0.5s ease-in-out;
+                width: 50%;
+                min-width: 30rem;
                 height: 80vh;
                 box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
                 overflow-y: scroll;
                 @include custom-scrollbar(4px, $secondary-color, #0d2b26, rgba(13, 43, 38, 0.7));
                 @include smoothScroll;
                 overflow-x: hidden;
-                border-radius: 16px 0 0 16px;
+                border-radius: 16px;
                 padding: $padding2x;
 
                 pre {
@@ -113,8 +118,9 @@ main {
                     /* Opera 7 */
                     word-wrap: break-word;
                     /* Internet Explorer 5.5+ */
-                    font-weight: bold;
-                    font-size: 12px;
+
+
+                    font-size: 14px;
                 }
 
                 .tooltip-text {
@@ -130,7 +136,12 @@ main {
                     border-radius: 4px;
                 }
 
+                .response-text {
+                    font-family: 'Ubuntu', sans-serif;
+                }
+
                 #copy-btn-div {
+
                     display: block;
                     text-align: end;
 

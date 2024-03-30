@@ -4,7 +4,7 @@ const primaryColor = "#0d2b26";
 // Function to be called when the button is clicked
 function handleButtonClick() {
   var url = $("#url-value").val();
-
+  $(".response-text-div").css("width", "100%");
   fetch(url.toString())
     .then((response) => {
       // Check if the request was successful (status code 200)
@@ -17,14 +17,14 @@ function handleButtonClick() {
     })
     .then((data) => {
       // Log the parsed data to the console
+
       var readableData = JSON.stringify(data, null, 2);
       console.log(readableData);
       $(".response-text").html(
         '<pre id="formatted-text">' + readableData + "</pre>"
       );
 
-      // console.log(data);
-      // $('.response-text').text(data);
+      $(".response-text-div").css("border-radius", "16px 0 0 16px");
     })
     .catch((error) => {
       // Handle errors
@@ -33,6 +33,8 @@ function handleButtonClick() {
 }
 
 $("#copy-btn").on("click", function () {
+  $("#copy-btn").css("background-color", secondaryColor);
+  $("#copy-btn").css("color", primaryColor);
 
   setTimeout(() => {
     $(".tooltip-text").css("visibility", "visible");
@@ -40,7 +42,6 @@ $("#copy-btn").on("click", function () {
 
   setTimeout(() => {
     $(".tooltip-text").css("visibility", "hidden");
-    
   }, 700);
 });
 
@@ -54,4 +55,10 @@ $("#copy-btn").on("mouseleave", function () {
   $("#copy-btn").css("color", primaryColor);
 });
 
-//   https://api.themoviedb.org/3/movie/now_playing?api_key=cc9bcce557575cd9094bd4040409d484&language=en-US&page=1
+$("#url-value").on("input", function () {
+  var inputValue = $(this).val();
+  var lineBreak = inputValue.toString().split("\n").length;
+  $("#url-value").attr("rows", "3");
+});
+
+// https://api.themoviedb.org/3/movie/now_playing?api_key=cc9bcce557575cd9094bd4040409d484&language=en-US&page=1

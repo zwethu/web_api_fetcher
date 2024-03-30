@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/main.css">
     <script src="https://kit.fontawesome.com/98020ddee7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic&family=Ubuntu&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -14,13 +20,14 @@
 
 <body>
     <header>
-        <h1 class="header-text">WEB API FETCHER GET</h1>
+        <h1 class="header-text">WEB API FETCHER</h1>
     </header>
     <main>
         <div class="main-container">
             <div class="input-div">
-                <p class="input-label-animation">Hello! Please Enter the URL.</p>
-                <input type="text" class="url-input-box" id="url-value" placeholder="Enter the URL.....">
+                <p class="input-label-animation">Enter the URL to Fetch API Data</p>
+                <textarea type="text" name="url" class="url-input-box" id="url-value"
+                    placeholder="Enter the URL....." rows="1"></textarea>
                 <button class="send-btn" id="getButton" onclick="handleButtonClick()">GET</button>
             </div>
             <div class="response-content-div">
@@ -30,17 +37,17 @@
                             <span class="tooltip-text">Copied</span>
                             <i class="fa-regular fa-copy" id="copy-btn"></i>
                         </span>
-                       <span class="response-text">
-                        Here is your response data!!!  
-                       </span> 
+                        <span class="response-text">
+                            Here is your response data!!!
+                        </span>
                     </p>
                 </div>
             </div>
         </div>
     </main>
-    <!-- <footer>
+    <footer>
         <p>This is the footer.</p>
-    </footer> -->
+    </footer>
     <script src="index.js" type="text/javascript"></script>
 </body>
 
