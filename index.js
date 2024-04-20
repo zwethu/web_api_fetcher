@@ -24,7 +24,7 @@ function handleButtonClick() {
         '<pre id="formatted-text">' + readableData + "</pre>"
       );
 
-      $(".response-text-div").css("border-radius", "16px 0 0 16px");
+      // $(".response-text-div").css("border-radius", "16px 0 0 16px");
     })
     .catch((error) => {
       // Handle errors
