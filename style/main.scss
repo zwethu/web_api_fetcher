@@ -55,7 +55,7 @@ main {
         grid-template-columns: 80%;
 
         .input-label-animation {
-            font-size: 3em;
+            font-size: 2.8em;
             margin-bottom: 3rem;
             font-family: 'Ubuntu', sans-serif;
         }
@@ -66,7 +66,7 @@ main {
             border: none;
             outline: none;
             border-bottom: 1px solid $primary-color;
-            font-size: 1.2em;
+            font-size: 1em;
             margin-bottom: 2rem;
             text-overflow: ellipsis;
             font-family: 'Carrois Gothic', sans-serif;
@@ -122,6 +122,8 @@ main {
                     font-size: 14px;
                 }
 
+
+
                 .tooltip-text {
                     padding-bottom: 4px;
                     position: relative;
@@ -137,6 +139,7 @@ main {
 
                 .response-text {
                     font-family: 'Ubuntu', sans-serif;
+                    font-size: 14px;
                 }
 
                 #copy-btn-div {
@@ -174,12 +177,18 @@ main {
             padding-top: $padding3x;
 
             .input-label-animation {
-                font-size: 1.8rem;
-                margin-bottom: $margin3x;
+                text-align: center;
+                font-size: 1em;
+                margin-bottom: 24px;
+            }
+
+            .url-input-box {
+                font-size: 0.9em;
             }
 
             .send-btn {
                 width: 100%;
+                font-size: 1rem;
             }
         }
 
@@ -193,18 +202,52 @@ main {
                     height: 65vh;
                     width: 100%;
                     height: 60vh;
+
+                    pre {
+                        font-size: 10px;
+                    }
+
+                    .response-text {
+                        font-size: 10px;
+                    }
+
+                    .tooltip-text {
+                        font-size: 0.75em;
+                    }
                 }
             }
         }
     }
+
+    .header-text {
+        font-size: 1.3rem;
+    }
+
 }
 
-@media (max-width: $screen-lg) {
+@media (max-width: $screen-lg) and (min-width: $screen-md) {
     .main-container {
         display: block;
     }
 
     .main-container {
+        .input-div {
+            padding-top: $padding3x;
+
+            .input-label-animation {
+                font-size: 1.5em;
+            }
+
+            .url-input-box {
+                font-size: 1.3em;
+            }
+
+            .send-btn {
+                width: 100%;
+                font-size: 1.1rem;
+            }
+        }
+
         .response-content-div {
             padding: $padding2x 0;
 
@@ -215,9 +258,27 @@ main {
                     height: 65vh;
                     width: 100%;
                     height: 60vh;
+
+                    pre {
+                        font-size: 10px;
+                    }
+
+                    .response-text {
+                        font-size: 0.9em;
+                    }
+
+                    .tooltip-text {
+                        font-size: 0.9em;
+                    }
                 }
+
+
             }
         }
+    }
+
+    .header-text {
+        font-size: 1.3rem;
     }
 }
 
